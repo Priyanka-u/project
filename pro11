@@ -1,0 +1,12 @@
+//11) Export result for question no 10 to MySql database.
+
+
+sqoop export --connect jdbc:mysql://localhost/q11 --username root --password '1' --table qsn11 --update-mode  allowinsert --update-key job --export-dir /myproject/10ans --input-fields-terminated-by '\t' ;
+
+
+
+
+create database q11;
+
+CREATE TABLE qsn11(job VARCHAR(100) NOT NULL , total DOUBLE NOT NULL, perc DOUBLE NOT NULL, PRIMARY KEY(job));
+
